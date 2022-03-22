@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Zum Test</h1>
+        <h1>Test</h1>
         <BoardsMain />
       </div>
     );

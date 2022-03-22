@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
-  "description": "ZumTest Client",
+  "description": "Test Client",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
