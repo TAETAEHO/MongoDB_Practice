@@ -2,6 +2,8 @@ require("dotenv").config();
 const fs = require("fs");
 const https = require("https");
 const cors = require("cors");
+const morgan = require("morgan");
+const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
@@ -9,6 +11,8 @@ const app = express();
 const controllers = require("./controllers");
 const database = require("./database/database");
 
+app.use(helmet());
+app.use(morgan("combined"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
