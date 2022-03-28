@@ -38,8 +38,8 @@ const HTTPS_PORT = process.env.HTTPS_PORT || 80;
 let server;
 
 database()
-  .then((db) => {
-    console.log("init!", db);
+  .then(() => {
+    console.log("init!");
 
     if (fs.existsSync("./key.pem") && fs.existsSync("./cert.pem")) {
       const privateKey = fs.readFileSync(__dirname + "/key.pem", "utf8");
