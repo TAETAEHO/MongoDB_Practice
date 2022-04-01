@@ -6,7 +6,6 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const express = require("express");
-// const boardsRouter = require("./router/boards.js");
 
 const app = express();
 
@@ -26,7 +25,6 @@ app.use(
 );
 
 app.use(cookieParser());
-// app.use("/boards", boardsRouter);
 
 app.post("/board", controllers.createBoard);
 app.get("/board", controllers.findBoard);
